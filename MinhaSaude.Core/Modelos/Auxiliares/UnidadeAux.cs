@@ -1,6 +1,6 @@
 ﻿namespace MinhaSaude.Core.Modelos.Auxiliares;
 
-internal class UnidadeAux
+public class UnidadeAux
 {
     public int Id { get; set; }
     public required string Nome { get; set; }

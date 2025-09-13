@@ -4,6 +4,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.14.36221.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinhaSaude.Data", "MinhaSaude.Data\MinhaSaude.Data.csproj", "{C827C87F-A736-4F8F-9D88-483A07C9E720}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6A28A705-6CE5-4B47-9B38-CCE6A01C77A7} = {6A28A705-6CE5-4B47-9B38-CCE6A01C77A7}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinhaSaude.Core", "MinhaSaude.Core\MinhaSaude.Core.csproj", "{6A28A705-6CE5-4B47-9B38-CCE6A01C77A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{380A7511-A354-6D7A-0CC0-8FA1F1BA7B6C}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +26,10 @@ Global
 		{C827C87F-A736-4F8F-9D88-483A07C9E720}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C827C87F-A736-4F8F-9D88-483A07C9E720}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C827C87F-A736-4F8F-9D88-483A07C9E720}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A28A705-6CE5-4B47-9B38-CCE6A01C77A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A28A705-6CE5-4B47-9B38-CCE6A01C77A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A28A705-6CE5-4B47-9B38-CCE6A01C77A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A28A705-6CE5-4B47-9B38-CCE6A01C77A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

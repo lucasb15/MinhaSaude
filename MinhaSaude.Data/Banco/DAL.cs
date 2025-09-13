@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,9 +17,19 @@ public class DAL<T> where T : class
         this.context = context;
     }
 
-    public IEnumerable<T> Listar()
+    public IEnumerable<T> Listar
+        (
+        Expression<Func<T, bool>>? filtro = null,
+        Func<IQueryable<T>, IOrderedQueryable<T>>? ordem = null,
+        params Expression<Func<T, object>>[] includes
+        )
     {
-        return context.Set<T>().ToList();
+        IQueryable<T> query = context.Set<T>();
+        if (filtro != null) query = query.Where(filtro);
+        if (ordem != null) query = ordem(query);
+        foreach (var include in includes) query = query.Include(include);
+
+        return query.ToList();
     }
 
     public void Adicionar(T objeto)
